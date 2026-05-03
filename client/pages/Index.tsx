@@ -73,7 +73,95 @@ export default function Index() {
             </button>
           </div>
         </div>
-        
+        {/* Approach Section */}
+      <section id="approach" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-amber-900/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-12">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">01 — THE APPROACH</span>
+            <h2 className="text-5xl md:text-6xl font-serif font-bold mt-4 mb-6">A New Way to Navigate Your Benefits</h2>
+            <p className="text-xl text-slate-300">
+              You don't want a sales pitch. You want clarity. Here's how I give it to you.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition">
+              <h3 className="text-2xl font-serif font-bold text-white mb-3">"Clarity First, Always."</h3>
+              <p className="text-slate-300 mb-4">
+                This is the principle behind my approach. I review your 401(k) or 403(b) plans, evaluate new employer benefits, analyze stock options, and assess retirement offerings—all without the intimidation factor. No pressure. No judgment. Just straightforward analysis that helps you understand your situation before you make any decisions.
+              </p>
+              <p className="text-slate-400 italic">
+                Then, when you're ready: "Want help creating a long-term plan? Let's talk about your situation."
+              </p>
+              <div className="mt-6 pt-6 border-t border-amber-900/30">
+                <h4 className="text-amber-400 font-semibold mb-3">THE PHILOSOPHY</h4>
+                <p className="text-slate-300">
+                  Life science and biotech professionals inherit complexity—compensation packages with multiple moving parts, tax implications, career trajectory decisions. You feel overwhelmed. I remove the intimidation and position myself as a helpful resource—not a product salesman. By offering an AI-first experience, you get clarity without judgment. You understand your situation before anyone pressures you to act.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-amber-900/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-12">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">03 — CORE SERVICES</span>
+            <h2 className="text-5xl md:text-6xl font-serif font-bold mt-4">What I Do</h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition group">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:from-amber-300 group-hover:to-amber-500 transition">
+                  <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-serif font-bold text-white mb-3">401(k) & 403(b) Optimization</h3>
+                  <p className="text-slate-300">
+                    Comprehensive review of your current retirement plans. We identify optimization opportunities without forcing unnecessary transfers or rollovers. Understand your options before making changes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition group">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:from-amber-300 group-hover:to-amber-500 transition">
+                  <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-serif font-bold text-white mb-3">Employer Benefits Evaluation</h3>
+                  <p className="text-slate-300">
+                    Evaluating a new role? I provide detailed analysis of stock options, RSUs, benefits packages, and retirement offerings to help you understand the true value of your compensation and career move.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition group">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:from-amber-300 group-hover:to-amber-500 transition">
+                  <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-serif font-bold text-white mb-3">Career Transition Planning</h3>
+                  <p className="text-slate-300">
+                    Navigating a career move? Personalized guidance aligned with your unique situation, helping you understand financial implications and opportunities at every step of your journey.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
         {/* Abstract Background Element */}
         <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] bg-gradient-to-t from-amber-500/5 to-transparent blur-[100px] pointer-events-none" />
       </section>

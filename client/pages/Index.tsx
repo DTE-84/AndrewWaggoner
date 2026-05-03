@@ -282,16 +282,69 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-24 px-6 md:px-16 bg-slate-950">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
-          <div className="flex flex-col gap-2">
-            <span className="font-serif text-2xl font-extrabold uppercase text-white tracking-widest">Andrew <span className="text-amber-400">Waggoner</span></span>
-            <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest font-bold italic">Independent Financial Advisory // Quincy, IL</p>
+      {/* 05 // FOOTER */}
+      <footer className="py-32 px-6 md:px-16 border-t border-white/5 bg-slate-950 relative overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-[120px] pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto flex flex-col gap-24 relative z-10">
+          <div className="grid md:grid-cols-[1.5fr_1fr_1fr] gap-16 md:gap-8">
+            <div className="space-y-8">
+              <div className="flex flex-col gap-2">
+                <span className="font-serif text-3xl font-extrabold uppercase text-white tracking-widest">Andrew <span className="text-amber-400">Waggoner</span></span>
+                <p className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em] font-bold italic">Independent Financial Advisory // STL MO</p>
+              </div>
+              <p className="text-sm text-slate-400 max-w-xs leading-relaxed font-medium">
+                High-fidelity career transition and benefits analysis for the life science and biotech sectors. Clarity first. Always.
+              </p>
+              <div className="flex gap-4">
+                <a href="https://www.linkedin.com/in/andrew-waggoner-cfp%C2%AE-03a9712a/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/40 hover:bg-amber-400/5 transition-all">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="mailto:andywaggoner24@gmail.com" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/40 hover:bg-amber-400/5 transition-all">
+                  <Mail className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h4 className="text-xs font-black uppercase tracking-[0.3em] text-white">The Platform</h4>
+              <ul className="space-y-4">
+                <li><a href="#hero" className="text-sm text-slate-500 hover:text-amber-400 transition-colors">Career Transition</a></li>
+                <li><a href="#benefits" className="text-sm text-slate-500 hover:text-amber-400 transition-colors">Benefit Logic</a></li>
+                <li><a href="#services" className="text-sm text-slate-500 hover:text-amber-400 transition-colors">What I Do</a></li>
+                <li><a href="#pedigree" className="text-sm text-slate-500 hover:text-amber-400 transition-colors">Pedigree</a></li>
+              </ul>
+            </div>
+
+            <div className="space-y-8">
+              <h4 className="text-xs font-black uppercase tracking-[0.3em] text-white">Direct Handshake</h4>
+              <div className="space-y-6">
+                <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                  Available for strategic advisory and independent analysis protocols.
+                </p>
+                <button 
+                  onClick={() => setIsContactOpen(true)}
+                  className="group flex items-center gap-3 bg-amber-500 text-slate-950 px-6 py-3 rounded-xl font-black uppercase text-[10px] tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(245,158,11,0.2)]"
+                >
+                  <span>Initiate Contact</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center gap-8">
-             <button onClick={() => setIsContactOpen(true)} className="text-xs font-black uppercase tracking-widest text-amber-500 hover:text-white transition-colors">Initiate Contact</button>
-             <p className="text-[10px] font-mono text-white/20 uppercase tracking-[0.4em]">© 2026 DTE Solutions LLC.</p>
+
+          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                <ShieldCheck className="text-amber-400 w-3.5 h-3.5" />
+              </div>
+              <p className="text-[9px] font-mono text-slate-600 uppercase tracking-[0.4em] font-bold">© 2026 DTE Solutions LLC. High-Fidelity Standards.</p>
+            </div>
+            <div className="flex gap-8 opacity-20">
+               <Shield className="w-4 h-4" />
+               <Target className="w-4 h-4" />
+               <TrendingUp className="w-4 h-4" />
+            </div>
           </div>
         </div>
       </footer>

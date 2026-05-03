@@ -76,7 +76,7 @@ export default function Index() {
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-amber-900/30">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
-            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">03 — CORE SERVICES</span>
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">02 — CORE SERVICES</span>
             <h2 className="text-5xl md:text-6xl font-serif font-bold mt-4">What I Do</h2>
           </div>
 
@@ -160,7 +160,7 @@ export default function Index() {
       {/* CTA Section */}
       <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-amber-900/30">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">05 — NEXT STEPS</span>
+          <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">03 — NEXT STEPS</span>
           <h2 className="text-5xl md:text-6xl font-serif font-bold mt-6 mb-8">Ready to Clarify Your Path?</h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
             Schedule a consultation to discuss your situation and explore how I can help you navigate your career transition with clarity.
@@ -175,7 +175,7 @@ export default function Index() {
       {/* Footer */}
       <footer className="border-t border-amber-900/30 bg-slate-950 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center text-slate-400">
-          <p>&copy; 2024 Andrew Waggoner. All rights reserved.</p>
+          <p>&copy; 2026 DTE Solutions. All rights reserved.</p>
           <p className="mt-2 text-sm">Independent Financial Advisory Services</p>
         </div>
       </footer>

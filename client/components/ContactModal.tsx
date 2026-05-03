@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Linkedin, Mail, ExternalLink, ShieldCheck } from "lucide-react";
+import { X, LinkedinIcon, Mail, ExternalLink, ShieldCheck } from "lucide-react";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -53,7 +53,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-lg bg-[#0077b5]/20 flex items-center justify-center text-[#0077b5]">
-                      <Linkedin className="w-6 h-6" />
+                      <LinkedinIcon className="w-6 h-6" />
                     </div>
                     <div>
                       <span className="block text-white font-bold uppercase tracking-widest text-xs mb-1">Professional Network</span>

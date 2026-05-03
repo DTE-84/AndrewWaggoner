@@ -132,41 +132,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Why This Works Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-amber-900/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-12">
-            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">04 — WHY THIS WORKS</span>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold mt-4">Strategic Positioning</h2>
-          </div>
-
-          <div className="space-y-6">
-            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-6 h-6 rounded-full bg-amber-900/50 flex items-center justify-center flex-shrink-0 mt-1">
-                  <div className="w-2 h-2 rounded-full bg-amber-400"></div>
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-white">You're Not Competing on Price</h3>
-              </div>
-              <p className="text-slate-300">
-                By positioning as THE independent financial advisor for life science professionals—backed by your book and expertise—you attract clients who value expertise over cost. These are the best clients: they close faster, stay longer, and refer more.
-              </p>
-            </div>
-
-            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-6 h-6 rounded-full bg-amber-900/50 flex items-center justify-center flex-shrink-0 mt-1">
-                  <div className="w-2 h-2 rounded-full bg-amber-400"></div>
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-white">AI-First Discovery Strategy</h3>
-              </div>
-              <p className="text-slate-300">
-                Most financial advisors are still optimizing for Google. You dominate ChatGPT, Claude, and Perplexity—where the next generation of high-net-worth clients are asking for guidance. First-mover advantage.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Availability & Pricing */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-amber-900/30">

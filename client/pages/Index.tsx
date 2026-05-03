@@ -52,10 +52,9 @@ export default function Index() {
             Specialized financial planning for Life Science and Biotech professionals. Deterministic analysis. Zero-judgment clarity.
           </p>
           <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
-          Stop competing for leads. Start making informed decisions about your future with independent guidance.
-          <br>
-          "Personalized financial guidance for your next chapter."
-          </br>
+            Stop competing for leads. Start making informed decisions about your future with independent guidance.
+            <br />
+            &quot;Personalized financial guidance for your next chapter.&quot;
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <button 

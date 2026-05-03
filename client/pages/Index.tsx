@@ -70,60 +70,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Challenge Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-amber-900/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-12">
-            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">02 — THE REALITY</span>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold mt-4">What's Really Stopping You</h2>
-            <p className="text-xl text-slate-300 mt-6">
-              You need clarity, not more options. Here's what gets in the way:
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition">
-              <div className="w-10 h-10 bg-amber-900/50 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-amber-400 font-semibold">1</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Wrong Tool, Wrong Goal</h3>
-              <p className="text-slate-300">
-                Generic websites focused on information, not conversion. You need a system built specifically to turn interested professionals into scheduled meetings.
-              </p>
-            </div>
-
-            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition">
-              <div className="w-10 h-10 bg-amber-900/50 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-amber-400 font-semibold">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Invisible to Discovery</h3>
-              <p className="text-slate-300">
-                When prospects search "career transition planning" or "financial advice for biotech professionals," you're not showing up in AI search results. First-mover advantage.
-              </p>
-            </div>
-
-            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition">
-              <div className="w-10 h-10 bg-amber-900/50 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-amber-400 font-semibold">3</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Missing Authority Signal</h3>
-              <p className="text-slate-300">
-                Your book and credentials are brilliant—but without a clear positioning strategy and distribution plan, they're sitting on a hard drive.
-              </p>
-            </div>
-
-            <div className="border border-amber-900/50 rounded-xl p-8 hover:border-amber-700/70 transition">
-              <div className="w-10 h-10 bg-amber-900/50 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-amber-400 font-semibold">4</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">No Lead Capture System</h3>
-              <p className="text-slate-300">
-                Even if prospects find you, there's no clear path from "interested" to "scheduled meeting." Warm leads lose momentum daily.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-amber-900/30">

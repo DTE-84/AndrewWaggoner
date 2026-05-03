@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowRight, Bot, MessageSquare, ShieldCheck, Cpu, Sparkles, MapPin, Briefcase, GraduationCap, Users, Shield, Target, TrendingUp } from "lucide-react";
+import { ArrowRight, Bot, MessageSquare, ShieldCheck, Cpu, Sparkles, MapPin, Briefcase, GraduationCap, Users, Shield, Target, TrendingUp, Linkedin, Mail } from "lucide-react";
 import BgAnimation from "../components/BgAnimation";
 import RollingText from "../components/RollingText";
 import NovaChat from "../components/NovaChat";

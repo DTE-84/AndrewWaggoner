@@ -5,6 +5,115 @@ import RollingText from "../components/RollingText";
 import NovaChat from "../components/NovaChat";
 import ContactModal from "../components/ContactModal";
 
+const Calculator = () => {
+  const [initial, setInitial] = useState(1000000);
+  const [years, setYears] = useState(20);
+  const [aumRate, setAumRate] = useState(1.0);
+  const [returnRate, setReturnRate] = useState(7.0);
+  const [flatFee, setFlatFee] = useState(7500);
+
+  const calculate = () => {
+    let aumBalance = initial;
+    let flatBalance = initial;
+    const r = returnRate / 100;
+    const aum = aumRate / 100;
+
+    for (let i = 0; i < years; i++) {
+      // AUM: Apply return, then subtract AUM fee %
+      aumBalance = aumBalance * (1 + r);
+      aumBalance = aumBalance * (1 - aum);
+
+      // Flat: Apply return, then subtract fixed $ fee
+      flatBalance = flatBalance * (1 + r);
+      flatBalance = flatBalance - flatFee;
+    }
+    return { aumBalance, flatBalance, savings: flatBalance - aumBalance };
+  };
+
+  const { aumBalance, flatBalance, savings } = calculate();
+
+  return (
+    <div className="bg-white/5 border border-white/10 rounded-[3rem] p-10 md:p-12 space-y-10 backdrop-blur-xl relative overflow-hidden group">
+      <div className="absolute top-0 right-0 p-8 opacity-5">
+        <TrendingUp className="w-32 h-32" />
+      </div>
+      
+      <div className="grid md:grid-cols-2 gap-8 relative z-10">
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 font-bold">Initial Portfolio ($)</label>
+            <input 
+              type="number" 
+              value={initial} 
+              onChange={(e) => setInitial(Number(e.target.value))}
+              className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-amber-500/50 outline-none transition-all"
+            />
+          </div>
+          <div className="space-y-2">
+            <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 font-bold">Time Horizon (Years)</label>
+            <input 
+              type="range" min="1" max="40"
+              value={years} 
+              onChange={(e) => setYears(Number(e.target.value))}
+              className="w-full accent-amber-500"
+            />
+            <div className="text-right text-amber-400 font-mono text-xs">{years} Years</div>
+          </div>
+          <div className="space-y-2">
+            <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 font-bold">Current AUM Fee (%)</label>
+            <input 
+              type="number" step="0.1"
+              value={aumRate} 
+              onChange={(e) => setAumRate(Number(e.target.value))}
+              className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-amber-500/50 outline-none transition-all"
+            />
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 font-bold">Expected Return (%)</label>
+            <select 
+              value={returnRate} 
+              onChange={(e) => setReturnRate(Number(e.target.value))}
+              className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-amber-500/50 outline-none transition-all"
+            >
+              {[4, 5, 6, 7, 8, 9, 10].map(r => <option key={r} value={r}>{r}% (Market Average)</option>)}
+            </select>
+          </div>
+          <div className="space-y-2">
+            <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 font-bold">Flat Fee Amount ($)</label>
+            <input 
+              type="number" 
+              value={flatFee} 
+              onChange={(e) => setFlatFee(Number(e.target.value))}
+              className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-amber-500/50 outline-none transition-all"
+            />
+          </div>
+          
+          <div className="pt-4">
+             <div className="p-6 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-center">
+                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-amber-500 font-bold block mb-2">Projected 20-Year Savings</span>
+                <span className="text-4xl font-serif font-bold text-white">${Math.floor(savings).toLocaleString()}</span>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/5 relative z-10">
+        <div className="space-y-1">
+          <span className="text-[9px] font-mono uppercase tracking-widest text-slate-500 font-bold">Flat Fee End Value</span>
+          <p className="text-xl font-serif font-bold text-white">${Math.floor(flatBalance).toLocaleString()}</p>
+        </div>
+        <div className="space-y-1 text-right">
+          <span className="text-[9px] font-mono uppercase tracking-widest text-slate-500 font-bold">AUM Fee End Value</span>
+          <p className="text-xl font-serif font-bold text-slate-400">${Math.floor(aumBalance).toLocaleString()}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Index() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -131,6 +240,33 @@ export default function Index() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW // FLAT FEE SAVINGS CALCULATOR */}
+      <section id="calculator" className="py-40 px-6 md:px-16 border-t border-white/5 bg-slate-950 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-20 items-start">
+            <div className="space-y-8">
+              <span className="text-amber-500 font-mono text-[10px] tracking-[0.4em] uppercase font-bold block">Analysis Module // Savings Logic</span>
+              <h2 className="text-5xl md:text-7xl font-serif font-bold text-white leading-tight">
+                Evaluate Your <br />
+                <span className="text-amber-400 italic text-4xl md:text-6xl">Fee Efficiency.</span>
+              </h2>
+              <p className="text-lg text-slate-400 leading-relaxed max-w-xl font-medium">
+                Traditional AUM fees erode your wealth as your portfolio grows. Our flat fee model ensures your growth belongs to you, not your advisor.
+              </p>
+              
+              <div className="p-8 rounded-3xl bg-amber-500/5 border border-amber-500/20 italic">
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  &quot;Over 20 years, a 1% AUM fee can cost a high-net-worth professional hundreds of thousands in lost opportunity. It&apos;s time to switch to deterministic pricing.&quot;
+                </p>
+              </div>
+            </div>
+
+            <Calculator />
           </div>
         </div>
       </section>
